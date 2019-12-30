@@ -1,0 +1,21 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+
+.app-content {
+  min-height: calc(100vh - 110px);
+}
+
+.app-title {
+  text-transform: uppercase;
+  padding-left: 26px;
+}
+
+.header-toolbar {
+  justify-content: space-between;
+}

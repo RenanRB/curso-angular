@@ -1,0 +1,28 @@
+@import 'reset';
+@import 'themes';
+
+body {
+  margin: 0;
+}
+
+.center {
+  margin: 10px auto;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width75 {
+  width: 75%;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}

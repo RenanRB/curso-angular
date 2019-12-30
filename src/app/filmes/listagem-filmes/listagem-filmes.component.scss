@@ -1,0 +1,27 @@
+.home-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 20px);
+  justify-content: space-between;
+   padding: 10px;
+  .home-card {
+    margin-bottom: 10px;
+
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .home-content {
+    .home-card {
+      width: calc(50% - 52px);
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+    .home-content {
+      .home-card {
+        width: calc(25% - 52px);
+      }
+    }
+  }
