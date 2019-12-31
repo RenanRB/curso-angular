@@ -1,3 +1,14 @@
-<p>
-  input-date works!
-</p>
+<div [formGroup]="formGroup">
+  <mat-form-field class="full-width">
+    <input  matInput
+            readonly
+            [matDatepicker]="picker"
+            [placeholder]="titulo"
+            [name]="controlName"
+            [formControlName]="controlName"
+            (click)="picker.open()">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  <mat-error *ngIf="validacao.hasErrorValidar(formControl, 'required')">Campo obrigatório</mat-error>
+  </mat-form-field>
+</div>

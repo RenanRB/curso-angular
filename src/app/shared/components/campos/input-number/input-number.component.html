@@ -1,3 +1,15 @@
-<p>
-  input-date works!
-</p>
+<div [formGroup]="formGroup">
+  <mat-form-field class="full-width">
+    <input  matInput
+            type="number"
+            [min]="minimo"
+            [max]="maximo"
+            [step]="step"
+            [placeholder]="titulo"
+            [name]="controlName"
+            [formControlName]="controlName">
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl, 'required')">Campo obrigatório</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl, 'min')">Campo precisa ter no mínimo o valor 0</mat-error>
+    <mat-error *ngIf="validacao.hasErrorValidar(formControl, 'max')">Campo pode ter no máximo o valor 10</mat-error>
+  </mat-form-field>
+</div>
