@@ -11,8 +11,6 @@ import { MaterialModule } from './shared/material/material.module';
 import { TopoComponent } from './shared/components/topo/topo.component';
 import { RodapeComponent } from './shared/components/rodape/rodape.component';
 
-import { FilmesModule } from './filmes/filmes.module';
-
 
 @NgModule({
   declarations: [
@@ -25,8 +23,7 @@ import { FilmesModule } from './filmes/filmes.module';
     BrowserAnimationsModule,
     LayoutModule,
     MaterialModule,
-    AppRoutingModule,
-    FilmesModule
+    AppRoutingModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'pt' }],
   bootstrap: [AppComponent]
