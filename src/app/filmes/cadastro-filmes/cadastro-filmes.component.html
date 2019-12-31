@@ -3,16 +3,8 @@
   <mat-card class="center width50" >
     <form [formGroup]="cadastro" (ngSubmit)="salvar()" (ngReset)="reiniciarForm()">
       <mat-card-content>
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Título *" name="titulo" formControlName="titulo">
-            <mat-error *ngIf="validacao.hasErrorValidar(f.titulo, 'required')">Campo obrigatório</mat-error>
-            <mat-error *ngIf="validacao.hasErrorValidar(f.titulo, 'minlength')">Campo precisa ter no mínimo 2 caracteres</mat-error>
-            <mat-error *ngIf="validacao.hasErrorValidar(f.titulo, 'maxlength')">Campo pode ter no máximo 256 caracteres</mat-error>
-          </mat-form-field>
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Link Foto" name="urlFoto" formControlName="urlFoto">
-            <mat-error *ngIf="validacao.hasErrorValidar(f.urlFoto, 'minlength')">Campo precisa ter no mínimo 10 caracteres</mat-error>
-          </mat-form-field>
+        <dio-input-text titulo="Título *" controlName="titulo" [formGroup]="cadastro"></dio-input-text>
+        <dio-input-text titulo="Link Foto" controlName="urlFoto" [formGroup]="cadastro"></dio-input-text>
           <mat-form-field class="full-width">
               <input  matInput
                       readonly
@@ -25,13 +17,7 @@
               <mat-datepicker #picker></mat-datepicker>
             <mat-error *ngIf="validacao.hasErrorValidar(f.dtLancamento, 'required')">Campo obrigatório</mat-error>
             </mat-form-field>
-          <mat-form-field class="full-width">
-            <textarea matInput
-                      placeholder="Descrição"
-                      name="descricao"
-                      formControlName="descricao">
-            </textarea>
-          </mat-form-field>
+        <dio-input-textarea titulo="Descrição" controlName="descricao" [formGroup]="cadastro"></dio-input-textarea>
           <mat-form-field class="full-width">
             <input  matInput
                     type="number"
@@ -45,10 +31,7 @@
             <mat-error *ngIf="validacao.hasErrorValidar(f.nota, 'min')">Campo precisa ter no mínimo o valor 0</mat-error>
             <mat-error *ngIf="validacao.hasErrorValidar(f.nota, 'max')">Campo pode ter no máximo o valor 10</mat-error>
           </mat-form-field>
-          <mat-form-field class="full-width">
-            <input matInput placeholder="Link IMDb" name="urlIMDb" formControlName="urlIMDb">
-            <mat-error *ngIf="validacao.hasErrorValidar(f.urlIMDb, 'minlength')">Campo precisa ter no mínimo 10 caracteres</mat-error>
-          </mat-form-field>
+        <dio-input-text titulo="Link IMDb" controlName="urlIMDb" [formGroup]="cadastro"></dio-input-text>
           <mat-form-field class="full-width">
             <mat-select placeholder="Gênero *" formControlName="genero">
               <mat-option value="Ação">Açao</mat-option>
