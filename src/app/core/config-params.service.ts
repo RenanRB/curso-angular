@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpParams } from '@angular/common/http';
-import { ConfigPrams } from '../shared/models/config-prams';
+import { ConfigParams } from '../shared/models/config-params';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class ConfigParamsService {
 
   constructor() { }
 
-  configurarParametros(config: ConfigPrams): HttpParams {
+  configurarParametros(config: ConfigParams): HttpParams {
     let httpParams = new HttpParams();
     if (config.pagina) {
       httpParams = httpParams.set('_page', config.pagina.toString());

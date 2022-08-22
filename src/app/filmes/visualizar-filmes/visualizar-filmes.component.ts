@@ -34,7 +34,7 @@ export class VisualizarFilmesComponent implements OnInit {
     const config = {
       data: {
         titulo: 'Você tem certeza que deseja excluir?',
-        descricao: 'Caso você tenha certceza que deseja excluir, clique no botão OK',
+        descricao: 'Caso você tenha certeza que deseja excluir, clique no botão OK',
         corBtnCancelar: 'primary',
         corBtnSucesso: 'warn',
         possuirBtnFechar: true
